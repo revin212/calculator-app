@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet"> 
+
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body class="flex justify-center items-center font-main-font bg-main-bg-blue w-full min-h-screen">
+  <main class="bg-main-bg-blue h-[500px] w-full mx-6">
+    <!-- header & toggle theme button -->
+    <div class="flex justify-between items-end">
+        <h1 class="text-3xl text-text-white">calc</h1>
+        <div class="flex justify-between items-end w-[8.5rem]">
+          <h2 class="text-sm text-text-white uppercase">theme</h2>
+          <div>
+            <p class="px-2 flex justify-between text-sm text-text-white">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </p>
+            <div class="h-6 bg-toggle-bg-blue rounded-full w-[4rem] flex justify-between py-1 px-1">
+              <div class="cursor-pointer w-[16px] rounded-full toggle"></div>
+              <div class="cursor-pointer w-[16px] rounded-full"></div>
+              <div class="cursor-pointer w-[16px] rounded-full"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- calc screen -->
+    <div class="bg-screen-bg-blue w-full h-[5.5rem] mt-8 rounded-lg p-4">
+      <p class="text-end text-[40px] text-text-white">399,981</p>
+    </div>
+
+    <!-- keypad -->
+    <div class="bg-toggle-bg-blue text-[32px] mt-6">
+      <div class="grid grid-cols-4 gap-3 p-6">
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">7</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">8</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">9</div>
+        <div class="keypad bg-key-bg-blue text-text-white text-xl shadow-blue1">DEL</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">4</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">5</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">6</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">+</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">1</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">2</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">3</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">-</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">.</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">0</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">/</div>
+        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">x</div>
+        <div class="col-span-2 keypad bg-key-bg-blue text-text-white text-xl shadow-blue1">RESET</div>
+        <div class="col-span-2 keypad bg-key-bg-red text-text-white shadow-red1">=</div>
+      </div>
+    </div>
+
+  </main>
+
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Revin Dennis Ramadhan</a>.
+  </div> -->
+</body>
+</html>

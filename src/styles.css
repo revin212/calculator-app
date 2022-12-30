@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.toggle{
+    @apply bg-key-bg-red;
+}
+
+.keypad{
+    @apply flex justify-center items-center h-[60px] pt-1 rounded-lg cursor-pointer;
+}
+
+.shadow-orange1{
+    box-shadow: hsl(28, 16%, 65%) 0px 2px 4px, hsl(28, 16%, 65%) 0px -3px 0px inset;
+}
+
+.shadow-blue1{
+    box-shadow: hsl(224, 28%, 35%) 0px 2px 4px, hsl(224, 28%, 35%) 0px -3px 0px inset;
+}
+
+.shadow-red1{
+    box-shadow: hsl(6, 70%, 34%) 0px 2px 4px, hsl(6, 70%, 34%) 0px -3px 0px inset;
+}
