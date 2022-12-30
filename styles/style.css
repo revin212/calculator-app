@@ -419,6 +419,44 @@ video {
   display: none;
 }
 
+:root {
+  --color-main-bg: hsl(222, 26%, 31%);
+  --color-toggle-bg: hsl(223, 31%, 20%);
+  --color-screen-bg: hsl(224, 36%, 15%);
+  --key-bg-primary: hsl(30, 25%, 89%);
+  --key-shadow-primary: hsl(28, 16%, 65%) 0px 2px 4px, hsl(28, 16%, 65%) 0px -3px 0px inset;
+  --key-bg-hover-primary:hsl(30, 25%, 89%);
+  --key-bg-secondary: hsl(225, 21%, 49%);
+  --key-shadow-secondary: hsl(224, 28%, 35%) 0px 2px 4px, hsl(224, 28%, 35%) 0px -3px 0px inset;
+  --key-bg-hover-secondary:hsl(228, 24%, 71%);
+  --key-bg-ternary: hsl(6, 63%, 50%);
+  --key-shadow-ternary: hsl(6, 70%, 34%) 0px 2px 4px, hsl(6, 70%, 34%) 0px -3px 0px inset;
+  --key-bg-hover-ternary:hsl(6, 54%, 63%);
+  --color-text-primary: hsl(221, 14%, 31%);
+  --color-text-secondary: hsl(0, 0%, 100%);
+  --color-text-header: hsl(0, 0%, 100%);
+  --color-text-equal: hsl(0, 0%, 100%);
+}
+
+.third-theme {
+  --color-main-bg: hsl(268, 75%, 9%);
+  --color-toggle-bg: hsl(268, 71%, 12%);
+  --color-screen-bg: hsl(268, 71%, 12%);
+  --key-bg-primary: hsl(268, 47%, 21%);
+  --key-shadow-primary: hsl(290, 70%, 36%) 0px 2px 4px, hsl(290, 70%, 36%) 0px -3px 0px inset;
+  --key-bg-hover-primary:hsl(268, 42%, 45%);
+  --key-bg-secondary: hsl(281, 89%, 26%);
+  --key-shadow-secondary: hsl(285, 91%, 52%) 0px 2px 4px, hsl(285, 91%, 52%) 0px -3px 0px inset;
+  --key-bg-hover-secondary:hsl(281, 60%, 48%);
+  --key-bg-ternary: hsl(176, 100%, 44%);
+  --key-shadow-ternary: hsl(177, 92%, 70%) 0px 2px 4px, hsl(177, 92%, 70%) 0px -3px 0px inset;
+  --key-bg-hover-ternary:hsl(176, 61%, 71%);
+  --color-text-primary: hsl(52, 100%, 62%);
+  --color-text-secondary: hsl(0, 0%, 100%);
+  --color-text-header: hsl(52, 100%, 62%);
+  --color-text-equal: hsl(198, 20%, 13%);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -538,20 +576,12 @@ video {
   display: grid;
 }
 
-.h-\[500px\] {
-  height: 500px;
-}
-
 .h-6 {
   height: 1.5rem;
 }
 
 .h-\[5\.5rem\] {
   height: 5.5rem;
-}
-
-.h-\[480px\] {
-  height: 480px;
 }
 
 .min-h-screen {
@@ -614,38 +644,28 @@ video {
   border-radius: 0.5rem;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
+.bg-main-bg {
+  background-color: var(--color-main-bg);
 }
 
-.bg-main-bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(222 26% 31% / var(--tw-bg-opacity));
+.bg-toggle-bg {
+  background-color: var(--color-toggle-bg);
 }
 
-.bg-toggle-bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(223 31% 20% / var(--tw-bg-opacity));
+.bg-screen-bg {
+  background-color: var(--color-screen-bg);
 }
 
-.bg-screen-bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(224 36% 15% / var(--tw-bg-opacity));
+.bg-key-primary {
+  background-color: var(--key-bg-primary);
 }
 
-.bg-key-bg-orange {
-  --tw-bg-opacity: 1;
-  background-color: hsl(30 25% 89% / var(--tw-bg-opacity));
+.bg-key-secondary {
+  background-color: var(--key-bg-secondary);
 }
 
-.bg-key-bg-blue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(225 21% 49% / var(--tw-bg-opacity));
-}
-
-.bg-key-bg-red {
-  --tw-bg-opacity: 1;
-  background-color: hsl(6 63% 50% / var(--tw-bg-opacity));
+.bg-key-ternary {
+  background-color: var(--key-bg-ternary);
 }
 
 .p-4 {
@@ -706,19 +726,46 @@ video {
   text-transform: uppercase;
 }
 
-.text-text-white {
-  --tw-text-opacity: 1;
-  color: hsl(0 0% 100% / var(--tw-text-opacity));
+.text-header-text {
+  color: var(--color-text-header);
 }
 
-.text-text-blue {
-  --tw-text-opacity: 1;
-  color: hsl(221 14% 31% / var(--tw-text-opacity));
+.text-primary-text {
+  color: var(--color-text-primary);
+}
+
+.text-secondary-text {
+  color: var(--color-text-secondary);
+}
+
+.text-equal-text {
+  color: var(--color-text-equal);
+}
+
+.shadow-primary-shadow {
+  --tw-shadow: var(--key-shadow-primary);
+  --tw-shadow-colored: var(--key-shadow-primary);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-secondary-shadow {
+  --tw-shadow: var(--key-shadow-secondary);
+  --tw-shadow-colored: var(--key-shadow-secondary);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-ternary-shadow {
+  --tw-shadow: var(--key-shadow-ternary);
+  --tw-shadow-colored: var(--key-shadow-ternary);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .toggle {
-  --tw-bg-opacity: 1;
-  background-color: hsl(6 63% 50% / var(--tw-bg-opacity));
+  background-color: var(--key-bg-ternary);
+}
+
+.toggle:hover {
+  background-color: var(--key-bg-hover-ternary);
 }
 
 .keypad {
@@ -731,24 +778,21 @@ video {
   padding-top: 0.25rem;
 }
 
-.shadow-orange1{
-  box-shadow: hsl(28, 16%, 65%) 0px 2px 4px, hsl(28, 16%, 65%) 0px -3px 0px inset;
+.hover\:bg-key-hover-primary:hover {
+  background-color: var(--key-bg-hover-primary);
 }
 
-.shadow-blue1{
-  box-shadow: hsl(224, 28%, 35%) 0px 2px 4px, hsl(224, 28%, 35%) 0px -3px 0px inset;
+.hover\:bg-key-hover-secondary:hover {
+  background-color: var(--key-bg-hover-secondary);
 }
 
-.shadow-red1{
-  box-shadow: hsl(6, 70%, 34%) 0px 2px 4px, hsl(6, 70%, 34%) 0px -3px 0px inset;
+.hover\:bg-key-hover-ternary:hover {
+  background-color: var(--key-bg-hover-ternary);
 }
 
 @media (min-width: 768px) {
-  .md\:gap-4 {
-    gap: 1rem;
-  }
-
   .md\:gap-5 {
     gap: 1.25rem;
   }
 }
+

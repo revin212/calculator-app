@@ -3,21 +3,83 @@
 @tailwind utilities;
 
 .toggle{
-    @apply bg-key-bg-red;
+    @apply bg-key-ternary;
+}
+.toggle:hover{
+    @apply bg-key-hover-ternary;
 }
 
 .keypad{
     @apply flex justify-center items-center h-[60px] pt-1 rounded-lg cursor-pointer;
 }
 
-.shadow-orange1{
-    box-shadow: hsl(28, 16%, 65%) 0px 2px 4px, hsl(28, 16%, 65%) 0px -3px 0px inset;
+@layer base{
+    :root {
+        --color-main-bg: hsl(222, 26%, 31%);
+        --color-toggle-bg: hsl(223, 31%, 20%);
+        --color-screen-bg: hsl(224, 36%, 15%);
+        
+        --key-bg-primary: hsl(30, 25%, 89%);
+        --key-shadow-primary: hsl(28, 16%, 65%) 0px 2px 4px, hsl(28, 16%, 65%) 0px -3px 0px inset;
+        --key-bg-hover-primary:hsl(30, 25%, 89%);
+
+        --key-bg-secondary: hsl(225, 21%, 49%);
+        --key-shadow-secondary: hsl(224, 28%, 35%) 0px 2px 4px, hsl(224, 28%, 35%) 0px -3px 0px inset;
+        --key-bg-hover-secondary:hsl(228, 24%, 71%);
+
+        --key-bg-ternary: hsl(6, 63%, 50%);
+        --key-shadow-ternary: hsl(6, 70%, 34%) 0px 2px 4px, hsl(6, 70%, 34%) 0px -3px 0px inset;
+        --key-bg-hover-ternary:hsl(6, 54%, 63%);
+
+        --color-text-primary: hsl(221, 14%, 31%);
+        --color-text-secondary: hsl(0, 0%, 100%);
+        --color-text-header: hsl(0, 0%, 100%);
+        --color-text-equal: hsl(0, 0%, 100%);
+    }
+    .second-theme {
+        --color-main-bg: hsl(0, 0%, 90%);
+        --color-toggle-bg: hsl(0, 5%, 81%);
+        --color-screen-bg: hsl(0, 0%, 93%);
+
+        --key-bg-primary: hsl(45, 7%, 89%);
+        --key-shadow-primary: hsl(35, 11%, 61%) 0px 2px 4px, hsl(35, 11%, 61%) 0px -3px 0px inset;
+        --key-bg-hover-primary:hsl(45, 7%, 89%);
+
+        --key-bg-secondary: hsl(185, 42%, 37%);
+        --key-shadow-secondary: hsl(185, 58%, 25%) 0px 2px 4px, hsl(185, 58%, 25%) 0px -3px 0px inset;
+        --key-bg-hover-secondary:hsl(186, 27%, 55%);
+
+        --key-bg-ternary: hsl(25, 98%, 40%);
+        --key-shadow-ternary: hsl(25, 99%, 27%) 0px 2px 4px, hsl(25, 99%, 27%) 0px -3px 0px inset;
+        --key-bg-hover-ternary:hsl(25, 60%, 53%);
+
+        --color-text-primary: hsl(60, 10%, 19%);
+        --color-text-secondary: hsl(0, 0%, 100%);
+        --color-text-header: hsl(60, 10%, 19%);
+        --color-text-equal: hsl(0, 0%, 100%);
+    }
+    .third-theme {
+        --color-main-bg: hsl(268, 75%, 9%);
+        --color-toggle-bg: hsl(268, 71%, 12%);
+        --color-screen-bg: hsl(268, 71%, 12%);
+
+        --key-bg-primary: hsl(268, 47%, 21%);
+        --key-shadow-primary: hsl(290, 70%, 36%) 0px 2px 4px, hsl(290, 70%, 36%) 0px -3px 0px inset;
+        --key-bg-hover-primary:hsl(268, 42%, 45%);
+
+        --key-bg-secondary: hsl(281, 89%, 26%);
+        --key-shadow-secondary: hsl(285, 91%, 52%) 0px 2px 4px, hsl(285, 91%, 52%) 0px -3px 0px inset;
+        --key-bg-hover-secondary:hsl(281, 60%, 48%);
+
+        --key-bg-ternary: hsl(176, 100%, 44%);
+        --key-shadow-ternary: hsl(177, 92%, 70%) 0px 2px 4px, hsl(177, 92%, 70%) 0px -3px 0px inset;
+        --key-bg-hover-ternary:hsl(176, 61%, 71%);
+
+        --color-text-primary: hsl(52, 100%, 62%);
+        --color-text-secondary: hsl(0, 0%, 100%);
+        --color-text-header: hsl(52, 100%, 62%);
+        --color-text-equal: hsl(198, 20%, 13%);
+    }
+
 }
 
-.shadow-blue1{
-    box-shadow: hsl(224, 28%, 35%) 0px 2px 4px, hsl(224, 28%, 35%) 0px -3px 0px inset;
-}
-
-.shadow-red1{
-    box-shadow: hsl(6, 70%, 34%) 0px 2px 4px, hsl(6, 70%, 34%) 0px -3px 0px inset;
-}

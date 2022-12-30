@@ -12,20 +12,20 @@
 
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body class="flex justify-center items-center font-main-font bg-main-bg-blue w-full min-h-screen">
-  <main class="bg-main-bg-blue w-full mx-6 max-w-[500px]">
+<body class="flex justify-center items-center font-main-font bg-main-bg w-full min-h-screen">
+  <main class="bg-main-bg w-full mx-6 max-w-[500px]">
     <!-- header & toggle theme button -->
-    <div class="flex justify-between items-end">
-        <h1 class="text-3xl text-text-white">calc</h1>
+    <div class="flex justify-between items-end  text-header-text">
+        <h1 class="text-3xl">calc</h1>
         <div class="flex justify-between items-end w-[8.5rem]">
-          <h2 class="text-sm text-text-white uppercase">theme</h2>
+          <h2 class="text-sm uppercase">theme</h2>
           <div>
-            <p class="px-2 flex justify-between text-sm text-text-white">
+            <p class="px-2 flex justify-between text-sm">
               <span>1</span>
               <span>2</span>
               <span>3</span>
             </p>
-            <div class="h-6 bg-toggle-bg-blue rounded-full w-[4rem] flex justify-between py-1 px-1">
+            <div class="h-6 bg-toggle-bg rounded-full w-[4rem] flex justify-between py-1 px-1">
               <div class="cursor-pointer w-[16px] rounded-full toggle"></div>
               <div class="cursor-pointer w-[16px] rounded-full"></div>
               <div class="cursor-pointer w-[16px] rounded-full"></div>
@@ -35,31 +35,31 @@
     </div>
 
     <!-- calc screen -->
-    <div class="bg-screen-bg-blue w-full h-[5.5rem] mt-8 rounded-lg p-4">
-      <p class="text-end text-[40px] text-text-white">399,981</p>
+    <div class="bg-screen-bg w-full h-[5.5rem] mt-8 rounded-lg p-4">
+      <p class="text-end text-[40px] text-header-text">0</p>
     </div>
 
     <!-- keypad -->
-    <div class="bg-toggle-bg-blue text-[32px] mt-6 rounded-lg">
+    <div class="bg-toggle-bg text-[32px] mt-6 rounded-lg">
       <div class="grid grid-cols-4 gap-3 md:gap-5 p-6 ">
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">7</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">8</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">9</div>
-        <div class="keypad bg-key-bg-blue text-text-white text-xl shadow-blue1">DEL</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">4</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">5</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">6</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">+</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">1</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">2</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">3</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">-</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">.</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">0</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">/</div>
-        <div class="keypad bg-key-bg-orange text-text-blue shadow-orange1">x</div>
-        <div class="col-span-2 keypad bg-key-bg-blue text-text-white text-xl shadow-blue1">RESET</div>
-        <div class="col-span-2 keypad bg-key-bg-red text-text-white shadow-red1">=</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">7</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">8</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">9</div>
+        <div class="keypad bg-key-secondary text-secondary-text text-xl shadow-secondary-shadow hover:bg-key-hover-secondary">DEL</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">4</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">5</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">6</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">+</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">1</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">2</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">3</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">-</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">.</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">0</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">/</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">x</div>
+        <div class="keypad col-span-2  bg-key-secondary text-secondary-text text-xl shadow-secondary-shadow hover:bg-key-hover-secondary">RESET</div>
+        <div class="keypad col-span-2  bg-key-ternary text-equal-text shadow-ternary-shadow hover:bg-key-hover-ternary">=</div>
       </div>
     </div>
 
