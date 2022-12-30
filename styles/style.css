@@ -550,6 +550,10 @@ video {
   height: 5.5rem;
 }
 
+.h-\[480px\] {
+  height: 480px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -568,6 +572,10 @@ video {
 
 .w-\[16px\] {
   width: 16px;
+}
+
+.max-w-\[500px\] {
+  max-width: 500px;
 }
 
 .cursor-pointer {
@@ -604,6 +612,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .bg-main-bg-blue {
@@ -729,4 +741,14 @@ video {
 
 .shadow-red1{
   box-shadow: hsl(6, 70%, 34%) 0px 2px 4px, hsl(6, 70%, 34%) 0px -3px 0px inset;
+}
+
+@media (min-width: 768px) {
+  .md\:gap-4 {
+    gap: 1rem;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
+  }
 }
