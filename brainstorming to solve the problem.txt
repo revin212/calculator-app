@@ -1,0 +1,101 @@
+features:
+
+- theme changing by clicking the toggle button
+- screen to show the number input and output
+- keypad to input numbers, operators, and functions (del, reset, =)
+
+
+Solutions:
+  - Theme
+1) queryselector each toggle element, make function changeTheme()
+2) toggle 1 -> delete all theme & toggle class, add 'toggle' class to the first toggle 
+   element
+3) toggle 2 -> delete all theme & toggle class, add 'second-theme' class and add 
+   'toggle' class to the second toggle element
+4) toggle 3 -> delete all theme & toggle class, add 'third-theme' class and add 
+   'toggle' class to the third toggle element
+
+  - Screen
+1) queryselector the screen element
+2) make function 
+updateScreen(value){
+	if(value == 'reset'){
+		innerText = '0';
+		screen.classList.remove('active')
+	}
+	}else if (value == 'del'){
+		innerText = innerText.slice(innerText.length-1);
+		if (innerText == '') {
+			innerText = '0';
+			screen.classList.remove('active')
+		}
+	}else if(value == 'equal'){
+		innerText = `${result}`
+	} 
+	else{
+		if(screen.classList.contains('active')) innerText += value;
+		else innerText = value;
+	}
+}
+
+
+  - Keypad and Calculation
+1) queryselector for each keypad, for the numbers, getElementByClass('numbers')
+2) addeventlistener, for the numbers and decima, loop through the array and :
+updateScreen(innerText);
+3) for the operators, addeventlistener,
+firstValue = screen.innerText
+updateScreen('reset');
+operator = button.innerText;
+
+
+4) '=' button:
+val2 = screen.innerText;
+if(val1=='Infinity') updateScreen('equal');
+else {
+	result = calculate(val1, val2, operator);
+	updateScreen('equal');
+}
+
+simple calc version:
+function calculate(val1, val2, operator){
+	+:return Number(val1) + Number(val2);
+	-:return Number(val1) - Number(val2);
+	/:if val1=0 && val2=0 return 'NaN', else if val2=0 return 'Infinity' 
+	  else return Number(val1) / Number(val2);
+	x:return Number(val1) * Number(val2);
+}
+
+alternative, storing operator as an object methods:
+var operators = {
+   '+': function(a, b){ return a+b},
+   '-': function(a, b){ return a-b},
+   '*': function(a, b){ return a*b},
+   '/': function(a, b){ 
+	if a=0 && b=0 return NaN
+	else if b=0 return 'Infinity
+	else return a/b
+	},
+}
+
+
+
+complicated version:
+2x3 --> 2 as first value, x as operator, 3 as second value
+/ --> calc(prevOperator, firstValue, secondValue), take the prev result as the first
+      value, / as operator
+2 --> take as second value
+.
+.
+= --> calc(operator, firstValue, secondValue)
+
+
+for '=', get innerText of the screen, then divide the string by the operator, 
+then it becomes an array of the values
+function calculate([values], operator){
+	let result=0
+	+:loop result+=values[i]
+	-:loop result-=values[i]
+	/:result=values[0], loop from i=1 result=result/values[i]
+	x:result=1, loop result*=values[i]
+}
