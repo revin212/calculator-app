@@ -13,18 +13,17 @@ const multiplyOperator = document.getElementById('multiply');
 const divideOperator = document.getElementById('divide');
 const operatorElements = [plusOperator, minusOperator, multiplyOperator, divideOperator];
 
+// number keypad elements
+const numberElements = document.getElementsByClassName('numbers');
+
 // equal button element
 const equalBtn = document.getElementById('equal')
-
-// numbers keypad element
-const numberElements = document.getElementsByClassName('numbers');
 
 // delete button element
 const deleteBtn = document.getElementById('delete');
 
 // reset button element
 const resetBtn = document.getElementById('reset');
-
 
 //calculation variables
 let result = 0;
@@ -33,6 +32,7 @@ let secondValue = 0;
 let tempValue = 0;
 let calcOnce = 1;
 let operator = '';
+
 
 //change theme function
 function changeTheme(index){
@@ -60,7 +60,6 @@ function changeTheme(index){
             break;
     }
 }
-
 // event listener click on toggle buttons
 for(let i=0; i<toggleBtns.length; i++){
     toggleBtns[i].addEventListener('click', ()=>{
@@ -68,6 +67,8 @@ for(let i=0; i<toggleBtns.length; i++){
     })
 }
 
+
+// Calculation functions :
 
 // update screen function
 function updateScreen(value){
@@ -95,7 +96,6 @@ function updateScreen(value){
     }
 }
 
-
 // calculate function
 function calculate(firstValue, secondValue, operator){
     switch(operator){
@@ -118,6 +118,14 @@ function calculate(firstValue, secondValue, operator){
     }
 }
 
+
+// add event listener for numbers
+for(let i = 0; i<numberElements.length; i++){
+    numberElements[i].addEventListener('click', ()=>{
+        if(screenElement.innerText == 'Infinity' || screenElement.innerText == 'NaN') screenElement.innerText = '';
+        updateScreen(numberElements[i].innerText);
+    })
+}
 
 // add event listener for operators
 for(let i = 0; i<operatorElements.length; i++){
@@ -146,20 +154,12 @@ equalBtn.addEventListener('click', ()=>{
     }
 })
 
-// add event listener for numbers
-for(let i = 0; i<numberElements.length; i++){
-    numberElements[i].addEventListener('click', ()=>{
-        if(screenElement.innerText == 'Infinity' || screenElement.innerText == 'NaN') screenElement.innerText = '';
-        updateScreen(numberElements[i].innerText);
-    })
-}
-
 // // add event listener for delete btn
 deleteBtn.addEventListener('click', ()=>{
     updateScreen('del');
 })
 
-// // add event listener for delete btn
+// // add event listener for reset btn
 resetBtn.addEventListener('click', ()=>{
     updateScreen('reset');
     result = 0;

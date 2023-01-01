@@ -783,6 +783,8 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+/* active toggle button styling */
+
 .toggle {
   background-color: var(--key-bg-ternary);
 }
@@ -790,6 +792,8 @@ video {
 .toggle:hover {
   background-color: var(--key-bg-hover-ternary);
 }
+
+/* keypad general styling */
 
 .keypad {
   display: flex;
@@ -800,6 +804,8 @@ video {
   border-radius: 0.5rem;
   padding-top: 0.25rem;
 }
+
+/* theme colors */
 
 .hover\:bg-key-hover-primary:hover {
   background-color: var(--key-bg-hover-primary);

@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* active toggle button styling */
 .toggle{
     @apply bg-key-ternary;
 }
@@ -9,10 +10,13 @@
     @apply bg-key-hover-ternary;
 }
 
+/* keypad general styling */
 .keypad{
     @apply flex justify-center items-center h-[60px] pt-1 rounded-lg cursor-pointer;
 }
 
+
+/* theme colors */
 @layer base{
     :root {
         --color-main-bg: hsl(222, 26%, 31%);
