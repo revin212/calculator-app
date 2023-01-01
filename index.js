@@ -110,6 +110,7 @@ function calculate(firstValue, secondValue, operator){
            break;
         case '/':
             if(firstValue==0 && secondValue==0) return 'NaN';
+            else if(firstValue==NaN && secondValue==0) return 'NaN';
             else if(secondValue==0) return 'Infinity';
             else return firstValue / secondValue;
             break;
@@ -123,6 +124,7 @@ function calculate(firstValue, secondValue, operator){
 for(let i = 0; i<numberElements.length; i++){
     numberElements[i].addEventListener('click', ()=>{
         if(screenElement.innerText == 'Infinity' || screenElement.innerText == 'NaN') screenElement.innerText = '';
+        if(result=='NaN') result=0;
         updateScreen(numberElements[i].innerText);
     })
 }
