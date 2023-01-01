@@ -140,7 +140,7 @@ for(let i = 0; i<operatorElements.length; i++){
 // add event listener for equal button
 equalBtn.addEventListener('click', ()=>{
     secondValue = Number(screenElement.innerText);
-    if(firstValue == 'Infinity') {updateScreen('equal');}
+    if(firstValue == 'Infinity' || result == 'NaN') {updateScreen('equal');}
     // repeating calculation with the same second argument (tempValue), Ex; 2x2 = 4 = 8 = 16 = ....
     else if(calcOnce>0){
         tempValue = secondValue;
