@@ -77,6 +77,8 @@ var operators = {
 	else return a/b
 	},
 }
+var key = '+';
+var c = operators[key](3, 5); //calling the method
 
 
 

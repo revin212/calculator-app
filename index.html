@@ -14,7 +14,7 @@
 
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body class="flex justify-center items-center font-main-font bg-main-bg w-full min-h-screen">
+<body id="body-element" class="flex justify-center items-center font-main-font bg-main-bg w-full min-h-screen">
   <main class="bg-main-bg w-full mx-6 max-w-[500px]">
     <!-- header & toggle theme button -->
     <div class="flex justify-between items-end  text-header-text">
@@ -30,10 +30,10 @@
               <span>2</span>
               <span>3</span>
             </p>
-            <div class="h-6 bg-toggle-bg rounded-full w-[4rem] flex justify-between py-1 px-1">
-              <div class="cursor-pointer w-[16px] rounded-full toggle"></div>
-              <div class="cursor-pointer w-[16px] rounded-full"></div>
-              <div class="cursor-pointer w-[16px] rounded-full"></div>
+            <div id='toggle' class="h-6 bg-toggle-bg rounded-full w-[4rem] flex justify-between py-1 px-1">
+              <div class="btn cursor-pointer w-[16px] rounded-full toggle"></div>
+              <div class="btn cursor-pointer w-[16px] rounded-full"></div>
+              <div class="btn cursor-pointer w-[16px] rounded-full"></div>
             </div>
           </div>
         </div>
@@ -41,39 +41,39 @@
 
     <!-- calc screen -->
     <div class="bg-screen-bg w-full h-[5.5rem] mt-8 rounded-lg p-4">
-      <p class="text-end text-[40px] text-header-text">0</p>
+      <p id="screen" class="text-end text-[40px] text-header-text overflow-hidden">0</p>
     </div>
 
     <!-- keypad -->
     <div class="bg-toggle-bg text-[32px] mt-6 rounded-lg">
       <div class="grid grid-cols-4 gap-3 md:gap-5 p-6 ">
         <!-- first row keypad -->
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">7</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">8</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">9</div>
-        <div class="keypad bg-key-secondary text-secondary-text text-xl shadow-secondary-shadow hover:bg-key-hover-secondary">DEL</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">7</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">8</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">9</div>
+        <div class="keypad bg-key-secondary text-secondary-text text-xl shadow-secondary-shadow hover:bg-key-hover-secondary" id="delete">DEL</div>
 
         <!-- second row keypad -->
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">4</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">5</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">6</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">+</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">4</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">5</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">6</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary" id="plus">+</div>
 
         <!-- third row keypad -->
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">1</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">2</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">3</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">-</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">1</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">2</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">3</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary" id="minus">-</div>
 
         <!-- fourth row keypad -->
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">.</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">0</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">/</div>
-        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary">x</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">.</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary numbers">0</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary" id="divide">/</div>
+        <div class="keypad bg-key-primary text-primary-text shadow-primary-shadow hover:bg-key-hover-primary" id="multiply">x</div>
 
         <!-- fifth row keypad -->
-        <div class="keypad col-span-2  bg-key-secondary text-secondary-text text-xl shadow-secondary-shadow hover:bg-key-hover-secondary">RESET</div>
-        <div class="keypad col-span-2  bg-key-ternary text-equal-text shadow-ternary-shadow hover:bg-key-hover-ternary">=</div>
+        <div class="keypad col-span-2  bg-key-secondary text-secondary-text text-xl shadow-secondary-shadow hover:bg-key-hover-secondary" id="reset">RESET</div>
+        <div class="keypad col-span-2  bg-key-ternary text-equal-text shadow-ternary-shadow hover:bg-key-hover-ternary" id="equal">=</div>
       </div>
     </div>
 
